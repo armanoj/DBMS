@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      .btn {
+      border: 1px solid black;
+      background-color: black;
+      color: black;
+      padding: 7px 14px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .success {
+      border:none;
+      color: white;
+    }
+
+    .success:hover {
+      background-color: #4CAF50;
+      color: white;
+      font-color:white;
+      border-radius: 25px;
+    }
+    .blinking{
+      animation: blinkingText 2s infinite;
+    }
+    @keyframes blinkingText{
+      0%{ color: darkred; }
+      50%{ color:transparent; }
+      100%{ color: darkred; }
+    }
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Marks Entry</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='cssem.css')}}">
+  </head>
+   <body class="thing">
+    <div class="fig">
+      <nav class="naba">
+        <ul>
+          <br>
+            <form action="/logout_user" method="post">
+                <button class="btn success" type="submit" style="float:right;position: absolute;bottom:14%;right:3%;">Logout</button>
+          </form>
+          <br>
+        </ul>
+      </nav><br><br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10">
+          <!-- action de de tuhich -->
+            <form class="" action="/subjectpage1" method="POST">       <!--FORM for gsk-->
+              <br>
+               <b><input style="width: 11%;font-size: 14px" step = 0.01  id="300" type="number" placeholder="Target-cgpa" required name="target" min="1" max="10"></b><br>
+              <br>
+             <b> <input style="width: 13%;font-size: 14px;" required name="latest_internal" placeholder="Latest Internal" type="number" >
+              </b><br><br>
+              <b style="color: #4caf50;"> Enter marks for:</b><br>
+                <div id="table1">
+                  <div class="row">
+                    <div class="col-xs-6">
+                        <label> Computer networks: </label>
+                    </div>
+                    <div class="col-xs-6">
+                        <b><input id="80" type="number" required name="1"></b><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                        <label> Object Oriented Modeling and Design: </label>
+                    </div>
+                    <div class="col-xs-6">
+                        <b><input id="81" type="number" required name="2"></b><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                        <label> Compiler Design </label>
+                    </div>
+                    <div class="col-xs-6">
+                        <b><input id="82" type="number" required name="3"></b><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                        <label> Web Technologies and Applications</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <b><input id="83" type="number" required name="4"></b><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                        <label> Elective 2 </label>
+                    </div>
+                    <div class="col-xs-6">
+                        <b><input id="84" type="number" required name="5"></b><br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                        <label>Elective 3</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <b><input id="85" type="number" required name="6"></b><br>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" style="padding-top:10px;">
+                  <!-- <div class="col-xs-8 col-xs-offset-0"><br>
+                      <b><input  style="width: 19%;font-size: 15px" id="7" type="number" placeholder="Attendance" required name="attendance" style="width:25%;"></b><br>
+                  </div> -->
+                </div>
+                <button class="w3-button w3-green w3-section w3-left" type="submit">Enter</button>
+            </form>
+        </div>
+        <div class="col-xs-2">
+          <div class="row"><br>
+            <table style="float: right;margin: 20px 0px">
+              <tr>
+                <td style="color: #4caf50">USN &nbsp &nbsp </td> &nbsp &nbsp &nbsp
+                <th class="bb" style="color:#4caf50 ;text-transform: uppercase;">{{ result[0] }}</th>
+              </tr>
+              <tr>
+                <td style="color: #4caf50">SEM</td>
+                <th style="color: #4caf50;text-transform: uppercase;">{{ result[1] }}</th>
+              </tr>
+            </table>
+          </div>
+          <div class="row" id="break"></div>
+          <div class="row" id="break"></div>
+          <div class="row" id="button">
+            {% if result[2] %}
+              <strong><span class="blinking" style="color: darkred;position: absolute;bottom: -50%;right: -5%;font-size: 25px;word-spacing: 0.01em">{{result[2]}}<br> &nbsp &nbsp &nbsp &#8659;</span></strong>
+            {% endif %}
+            <form action="/plot_b1" method="POST">
+              <button id="54"  style="position:absolute;top: 150%;left: 50%;background: none;outline: none;" type="submit" required name="plots"><img src="/static/images/graph_logo.jpg" alt="graph" width="60" height="60"></button><br>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </body>
+</html>

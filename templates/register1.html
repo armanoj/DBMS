@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+      a:hover{
+        background-color: #4CAF50;
+        text-decoration-color: black;
+        border-radius: 25px;
+      }
+    </style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css')}}">
+
+<title>Register</title>
+</head>
+
+
+<body class="thing">
+  <div class="fig">
+        <header class="site-header">
+            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+                <div class="container">
+                  <div class="collapse navbar-collapse" id="navbarToggle">
+                    <div class="  navbar-nav mr-auto" style="right: 10%;position: relative;">
+                      <a class="nav-item nav-link" style="color: white" href="/about">About this Project</a>
+                    </div>
+    
+                    <div class="navbar-nav">
+                      <a class="nav-item nav-link1" href="/login" style="color: white;left: 40%;position: relative;padding: 7px 14px;">Login</a>
+                      &nbsp
+                      &nbsp
+                      &nbsp 
+                      &nbsp
+                      &nbsp
+                      <a class="nav-item nav-link1" href="/" style="color: white;left: 30%;position: relative;padding: 7px 14px;">Home</a>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+      <div class="login-box">
+        <form action="/registerform" method ='POST' onsubmit="return checkForm(this)">
+            <h1 style="color: white">Join Today</h1>
+            {% if msg2 %}
+            <small style="color: red">{{msg2}}</small>
+            {% endif %}
+            <div class="texbox" >
+              <input class="blank" type="text" onkeyup="this.value = this.value.toUpperCase();" placeholder="USN" required name="usn">
+            </div>
+            <br>
+            <br>
+            <div class="texbox" >
+              <input class="blank" type="text" placeholder="Semester" min="1" max="7" required name="sem">
+            </div>
+            <br>
+            <br>
+            <div class="texbox" >
+             <input class="blank" type="text" placeholder="Email" required name="email">
+            </div>
+            <br>
+            <br>
+            <div class="texbox" >
+             <input class="blank" type="password" placeholder="Password" id="register-password" required name="password">
+            </div>
+            <br>
+            <br>
+            <div class="texbox" >
+             <input class="blank" type="password" placeholder="Confirm Password" id="register-confirm-password" required name="confirm_password">
+            </div>
+            <br>
+            <br>
+            <button class="btn" type="submit">Sign Up</button>
+        </form>
+       
+    </div>
+  </div> 
+  <script type="text/javascript">
+  var password = document.getElementById("register-password")
+    , confirm_password = document.getElementById("register-confirm-password");
+
+  function validatePassword(){
+    if(password.value != confirm_password.value) {
+      confirm_password.setCustomValidity("Passwords Don't Match");
+    } else {
+      confirm_password.setCustomValidity('');
+    }
+  }
+
+  password.onchange = validatePassword;
+  confirm_password.onkeyup = validatePassword;
+  </script>
+</body>
+</html> 

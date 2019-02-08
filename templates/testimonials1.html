@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" dir="ltr">
+	<title>testimonials</title>
+	<style type="text/css">
+		.btn {
+		  border: 1px solid black;
+		  background-color: black;
+		  color: black;
+		  padding: 7px 14px;
+		  font-size: 16px;
+		  cursor: pointer;
+		}
+		.success {
+		  border:none;
+		  color: white;
+		}
+
+		.success:hover {
+		  background-color: #4CAF50;
+		  color: white;
+		  font-color:white;
+		  border-radius: 25px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+</head>
+<body class="thing">
+	
+	 <nav class="naba">
+      <ul>
+        <br>
+        	<form action="/leader" method="post">
+        		<button class="btn success" type="submit" style="float: left;position: absolute;bottom:14%;left:3%;">Leaderboard</button>
+        	</form>
+        	<form action="/" method="">	
+           		<button class="btn success" type="submit" style="float:right;position: absolute;bottom:14%;right:3%;">Home</button>
+           	</form>	
+        <br>
+      </ul>
+    </nav>
+    <div class="fig">
+	<section class="team-area">
+	  <div class="container">
+	  	<div class="row">
+	  		<div class="col-sm-12 text-center">
+	  			<h2 style="color: white;font-family: serif;">Testimonials</h2>
+	  		</div>
+	  	</div><br><br><br>	
+	  	<div class="row">
+	        <div class="col-sm-6 col-sm-3">
+	  			<div class="team-block">
+	  				<div class="team-man">
+	  				<img src="/static/images/rpa.jpg">
+	  				</div>
+	  				<div class="team-description text-center">
+	  					<div class="title">
+	  						<h3>Ram prasad agarwal</h3>
+	  						<span>digital/McKinsey-16lpa</span>
+	  					</div>
+	  					<p>Have complete in and out knowledge of your projects: They are the interview starters most of the time.Practice competitive programming problems daily: They will improve your problem solving skills.Work more on basics. Learn every concept with some real world example: This will increase your memorising power and also help you understand the concept better.Master any one Object oriented programming (C++ or JAVA or Python), Data Structures, OS, DBMS, Algorithm.Always wear confidence and smile on your face. 
+	  					</p>
+
+	  				</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-sm-6 col-sm-3">
+	  			<div class="team-block">
+	  				<div class="team-man">
+	  				<img src="/static/images/asfia.jpg">
+	  				</div>
+	  				<div class="team-description text-center">
+	  					<div class="title">
+	  						<h3>Asfia armaan</h3>
+	  						<span>one plus-5lpa</span>
+	  					</div>
+	  					<p>
+	  					Work on aptitude.Quants,verbal and logical reasoning.Work on any one of the programming language thoroughly.Work well on your communication skills.Have a nice base on at least one or two core subjects from your branch.
+	  					</p>
+	  					
+	  				</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-sm-6 col-sm-3">
+	  			<div class="team-block">
+	  				<div class="team-man">
+	  				<img src="/static/images/ashrith.jpg">
+	  				</div>
+	  				<div class="team-description text-center">
+	  					<div class="title">
+	  						<h3>ASHRITH ARUN</h3>
+	  						<span>DELLOITE-8lpa</span>
+	  					</div>
+	  					<p>
+	  						Be logically and analytically prepped. In order to reach the later rounds like interview,u should have a strong logical and analytical base.Confidence is key.The way you present your answers should be confident.Choice of words.One of the things which is overlooked.Always choose right set of words and sentences to explain. Never include slang, short forms and cuss words while taking.KISS principle. Keep it short and simple.Don't talk irrelevant stuff and prolong your. answers unless the interviewer wants you to. Answer to the point.Body language.The way u r seated and how you give a handshake tells a lot about u. So a firm handshake and sitting straight without shaky or crossed legs is important.
+	  					</p>
+	  					
+	  				</div>
+	  			</div>
+	  		</div>
+	  		<div class="col-sm-6 col-sm-3">
+	  			<div class="team-block">
+	  				<div class="team-man">
+	  				<img src="/static/images/avinash.jpg">
+	  				</div>
+	  				<div class="team-description text-center">
+	  					<div class="title">
+	  						<h3>AVINASH</h3>
+	  						<span>CISCO-14CTC</span>
+	  					</div>
+	  					<p>
+	  					One most important thing to remem
+	  					ber that Preparation for Campus placement is not a single day task. Its gradual learning process. It is the process of your hard work, smart work, ability, presence of mind and luck. Try to prepare for multiple technologies rather than trying to be master in one. Believe in the idiom “Jack of all and Master Of None”. Make yourself aware and accustomed to as many things(technologies in this case) as possible in this phase of your career. It will really widen up your domain and you’ll have plenty of choices to pick from. Plan to answer those tough questions about yourself and your personality. 
+	  					</p>
+	  					
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+	  	
+	  </div>
+
+	</section>
+</div>
+</body>
+</html>
